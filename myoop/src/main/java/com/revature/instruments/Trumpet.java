@@ -2,26 +2,27 @@ package com.revature.instruments;
 
 import java.io.Serializable;
 
-public class Trumpet extends Instrument implements Serializable {
-
+public class Trumpet extends Instrument implements Serializable, BrassInstruments {
+	public static int numberOfTrumpets = 0;
 	public Trumpet(String name, String sound, String type) {
 		super(name, sound, type);
-		// TODO Auto-generated constructor stub
+		numberOfTrumpets++;
 	}
 
 	public Trumpet(String name, String sound) {
 		super(name, sound, "Trumpet");
-		// TODO Auto-generated constructor stub
 	}
 
 	public Trumpet(String name) {
 		super(name, "boop");
-		// TODO Auto-generated constructor stub
 	}
 
 	public Trumpet() {
-		// TODO Auto-generated constructor stub
 		this("Trumpet player");
+	}
+	
+	public void breathe() {
+		System.out.println(this.getName() + " is breathing");
 	}
 	
 	@Override

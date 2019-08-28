@@ -2,10 +2,13 @@ package com.revature.instruments;
 
 import java.io.Serializable;
 
-public class Tuba extends Instrument implements Serializable {
+public class Tuba extends Instrument implements Serializable, BrassInstruments {
+	
+	public static int numberOfTubas = 0;
 
 	public Tuba(String name, String sound, String type) {
 		super(name, sound, type);
+		numberOfTubas++;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -20,6 +23,10 @@ public class Tuba extends Instrument implements Serializable {
 
 	public Tuba() {
 		this("Tuba Player");
+	}
+	
+	public void breathe() {
+		System.out.println(this.getName() + " is breathing");
 	}
 
 	@Override

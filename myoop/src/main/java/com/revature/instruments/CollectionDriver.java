@@ -1,14 +1,18 @@
 package com.revature.instruments;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Set;
 
 public class CollectionDriver {
 
 	public static void main(String[] args) {
 		instrumentCollection();
+//		instrumentCollection2();
 	}
 	public static void instrumentCollection() {
 		
@@ -33,4 +37,11 @@ public class CollectionDriver {
 		System.out.println(instrumentQueue);
 	}
 
+	public static void instrumentCollection2() {
+		Set<Instrument> instrumentSet = new HashSet<Instrument>();
+		instrumentSet.add(new Trumpet());
+		instrumentSet.add(new Trumpet());
+		instrumentSet.add(new Trombone());
+		instrumentSet.add(new Tuba());
+	}
 }

@@ -4,23 +4,22 @@ import java.io.Serializable;
 
 public class Flute extends Instrument implements Serializable {
 
+	public static int numberOfFlutes = 0;
+	
 	public Flute(String name, String sound, String type) {
 		super(name, sound, type);
-		// TODO Auto-generated constructor stub
+		numberOfFlutes++;
 	}
 
 	public Flute(String name, String sound) {
 		this(name, sound, "Flute");
-		// TODO Auto-generated constructor stub
 	}
 
 	public Flute(String name) {
 		this(name, "hweet");
-		// TODO Auto-generated constructor stub
 	}
 
 	public Flute() {
-		// TODO Auto-generated constructor stub
 		this("Flute player");
 	}
 	

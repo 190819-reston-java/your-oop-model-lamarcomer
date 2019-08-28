@@ -9,12 +9,57 @@ public class InstrumentDriver {
 		
 		Trombone t = new Trombone("Brent");
 		t.play();
+		t.breathe();
 		
 		Instrument b = new Tuba("Brady");
 		b.tune();
 		
-		System.out.println("There are " + b.numberOfInstruments + " Instruments");
-		System.out.println("There are " + ((Trombone) t).numberOfTrombones + " Trombones");
-	}
+		Tuba d = null;
+		
+		Flute c = new Flute("Leone");
+		c.play();
+		
+		Trumpet o = null;
+		
+			if(((Trombone) t).numberOfTrombones==1) {
+				System.out.println("There is " + ((Trombone) t).numberOfTrombones + " Trombone");
+			} else if(((Trombone) t).numberOfTrombones>1) {
+				System.out.println("There are " + ((Trombone) t).numberOfTrombones + " Trombones");
+			} else {
+				System.out.println("There are " + ((Trombone) t).numberOfTrombones + " Trombones");
+		}
+			
+			if(((Tuba) d).numberOfTubas==1) {
+				System.out.println("There is " + ((Tuba) d).numberOfTubas + " Tuba");
+			} else if(((Tuba) d).numberOfTubas>1) {
+				System.out.println("There are " + ((Tuba) d).numberOfTubas + " Tubas");
+			} else {
+				System.out.println("There are " + ((Tuba) d).numberOfTubas + " Tubas");
+		}
+			
+			if(((Flute) c).numberOfFlutes==1) {
+				System.out.println("There is " +((Flute) c).numberOfFlutes + " Flute" );
+			} else if(((Flute) c).numberOfFlutes>1) {
+				System.out.println("There is " +((Flute) c).numberOfFlutes + " Flutes" );
+			} else {
+				System.out.println("There are " + ((Flute) c).numberOfFlutes + " Flutes");
+		}
+			
+			if(((Trumpet) o).numberOfTrumpets==1) {
+				System.out.println("There is " + ((Trumpet) o).numberOfTrumpets + " Trumpet");
+			} else if(((Trumpet) o).numberOfTrumpets>1) {
+				System.out.println("There are " + ((Trumpet) o).numberOfTrumpets + " Trumpets");
+			} else {
+				System.out.println("There are " + ((Trumpet) o).numberOfTrumpets + " Trumpets");
+		}
+			
+			if(b.numberOfInstruments==1) {
+				System.out.println("There is " + b.numberOfInstruments + " Total Instrument");
+			} else if(b.numberOfInstruments>1) {
+				System.out.println("There are " + b.numberOfInstruments + "  Total Instruments");
+			} else {
+				System.out.println("There are " + b.numberOfInstruments + " Total Instruments");
+		}
 
+	}
 }

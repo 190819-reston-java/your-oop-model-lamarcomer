@@ -2,7 +2,7 @@ package com.revature.instruments;
 
 import java.io.Serializable;
 
-public class Trombone extends Instrument implements Serializable {
+public class Trombone extends Instrument implements Serializable, BrassInstruments {
 	
 	public static int numberOfTrombones = 0;
 	
@@ -28,6 +28,10 @@ public class Trombone extends Instrument implements Serializable {
 		} else {
 			System.out.println("There are:" + numberOfTrombones + " Trombones");
 		}
+	}
+	
+	public void breathe() {
+		System.out.println(this.getName() + " is breathing");
 	}
 	
 	@Override
