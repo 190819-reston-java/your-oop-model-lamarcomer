@@ -29,10 +29,10 @@ public class Orchestra extends ArrayList<Instrument> {
 	
 	public void endPerformance() {
 		if(performing) {
-			System.out.println("The Orchestra performance is ending");
+			System.out.println("The Orchestra performance has ended");
 			performing = !performing;
 		} else {
-			System.out.println("Orchestra must be performing to end the performance");
+			System.out.println("The Orchestra must be performing to end the performance");
 		}
 	}
 

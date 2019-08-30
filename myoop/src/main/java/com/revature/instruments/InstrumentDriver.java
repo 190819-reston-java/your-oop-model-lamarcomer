@@ -10,19 +10,15 @@ public class InstrumentDriver {
 		Trombone t = new Trombone("Brent");
 		t.play();
 		t.breathe();
-
-		Instrument b = new Tuba("Brady");
-		b.tune();
-
-		Tuba d = new Tuba();
-
+		t.tune();
+		
+		Tuba d = new Tuba("Brady");
+		d.tune();
+		
 		Flute c = new Flute("Pamela");
 		c.play();
-
-		Trumpet o = new Trumpet();
 		
-		Flute r = new Flute();
-		
+		Trumpet o = new Trumpet();	
 		if (((Trombone) t).numberOfTrombones == 1) {
 			System.out.println("There is " + ((Trombone) t).numberOfTrombones + " Trombone");
 			
@@ -36,10 +32,6 @@ public class InstrumentDriver {
 
 		if (((Tuba) d).numberOfTubas == 1) {
 			System.out.println("There is " + ((Tuba) d).numberOfTubas + " Tuba");
-			
-		} else if (((Tuba) d).numberOfTubas > 1 | ((Tuba) d).numberOfTubas == 0) {
-			System.out.println("There are " + ((Tuba) d).numberOfTubas + " Tubas");
-			
 		} else {
 			System.out.println("There are " + ((Tuba) d).numberOfTubas + " Tubas");
 			
@@ -47,10 +39,6 @@ public class InstrumentDriver {
 
 		if (((Flute) c).numberOfFlutes == 1) {
 			System.out.println("There is " + ((Flute) c).numberOfFlutes + " Flute");
-			
-		} else if (((Flute) c).numberOfFlutes > 1 | ((Flute) c).numberOfFlutes == 0) {
-			System.out.println("There are " + ((Flute) c).numberOfFlutes + " Flutes");
-			
 		} else {
 			System.out.println("There are " + ((Flute) c).numberOfFlutes + " Flutes");
 			
@@ -58,23 +46,15 @@ public class InstrumentDriver {
 
 		if (((Trumpet) o).numberOfTrumpets == 1) {
 			System.out.println("There is " + ((Trumpet) o).numberOfTrumpets + " Trumpet");
-			
-		} else if (((Trumpet) o).numberOfTrumpets > 1 | ((Trumpet) o).numberOfTrumpets == 0) {
-			System.out.println("There are " + ((Trumpet) o).numberOfTrumpets + " Trumpets");
-			
 		} else {
 			System.out.println("There are " + ((Trumpet) o).numberOfTrumpets + " Trumpets");
 			
 		}
 
-		if (b.numberOfInstruments == 1) {
-			System.out.println("There is " + b.numberOfInstruments + " Total Instrument");
-			
-		} else if (b.numberOfInstruments > 1 | b.numberOfInstruments == 0) {
-			System.out.println("There are " + b.numberOfInstruments + " Total Instruments");
-			
+		if (d.numberOfInstruments == 1) {
+			System.out.println("There is " + d.numberOfInstruments + " Total Instrument");
 		} else {
-			System.out.println("There are " + b.numberOfInstruments + " Total Instruments");
+			System.out.println("There are " + d.numberOfInstruments + " Total Instruments");
 			
 		}
 

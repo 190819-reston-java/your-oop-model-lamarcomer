@@ -79,8 +79,9 @@ public abstract class Instrument {
 
 	@Override
 	public String toString() {
-		return "Instrument [name:" + name + ", sound:" + sound + ", type:" + type + ", number: " + number + "]";
+		return "Instrument name: " + name + ", sound:" + sound + ", type:" + type + ", number: " + number;
 	}
+	
 
 	@Override
 	public int hashCode() {
