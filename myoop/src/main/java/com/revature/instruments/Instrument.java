@@ -7,15 +7,21 @@ public abstract class Instrument {
 	private String name;
 	private String sound;
 	private String type;
+	private int number;
 	
-	public Instrument(String name, String sound, String type) {
+
+	public Instrument(String name, String sound, String type, int number) {
 		super();
 		this.name = name;
 		this.sound = sound;
 		this.type = type;
+		this.setNumber(number);
 		numberOfInstruments++;
 	}
 	
+	public Instrument(String name, String sound, String type) {
+		this(name, sound, type, numberOfInstruments);
+	}
 	public Instrument(String name, String sound) {
 		this(name, sound, "orchestra");
 	}
@@ -60,9 +66,20 @@ public abstract class Instrument {
 		this.type = type;
 	}
 	
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		if(number < 0) {
+			throw new NegativeNumberException();
+		}
+			this.number = number;
+	}
+
 	@Override
 	public String toString() {
-		return "Instrument [name:" + name + ", sound:" + sound + ", type:" + type + "]";
+		return "Instrument [name:" + name + ", sound:" + sound + ", type:" + type + ", number: " + number + "]";
 	}
 
 	@Override

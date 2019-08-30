@@ -5,16 +5,19 @@ import java.io.Serializable;
 public class Tuba extends Instrument implements Serializable, BrassInstruments {
 	
 	public static int numberOfTubas = 0;
+	public static int chair = 1;
 
-	public Tuba(String name, String sound, String type) {
-		super(name, sound, type);
+	public Tuba(String name, String sound, String type, int number) {
+		super(name, sound, type, number);
 		numberOfTubas++;
-		// TODO Auto-generated constructor stub
+		chair++;
+	}
+	public Tuba(String name, String sound, String type) {
+		this(name, sound, type, chair);
 	}
 
 	public Tuba(String name, String sound) {
 		this(name, sound, "Tuba");
-		// TODO Auto-generated constructor stub
 	}
 
 	public Tuba(String name) {
