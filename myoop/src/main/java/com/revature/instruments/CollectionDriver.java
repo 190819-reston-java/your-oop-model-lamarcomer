@@ -8,14 +8,17 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 public class CollectionDriver {
+	
+	private static List<Instrument> instrumentList= new ArrayList<Instrument>();
 
 	public static void main(String[] args) {
 		instrumentCollection();
 //		instrumentCollection2();
+		orchestraExample();
 	}
 	public static void instrumentCollection() {
 		
-		List<Instrument> instrumentList = new ArrayList<Instrument>();
+//		List<Instrument> instrumentList = new ArrayList<Instrument>();
 		instrumentList.add(new Trombone("Albert"));
 		instrumentList.add(new Tuba("Einstein", "boom"));
 		instrumentList.add(new Trumpet("Rony", "boop"));
@@ -63,5 +66,12 @@ public class CollectionDriver {
 		instrumentSet.add(new Trombone());
 		instrumentSet.add(new Tuba());
 		System.out.println(instrumentSet);
+	}
+	
+	private static void orchestraExample() {
+		Orchestra o = new Orchestra(instrumentList);
+		System.out.println("The performance will start soon");
+		o.performance();
+		o.endPerformance();
 	}
 }
