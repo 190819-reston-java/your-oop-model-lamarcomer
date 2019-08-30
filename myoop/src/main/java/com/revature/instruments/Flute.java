@@ -2,7 +2,7 @@ package com.revature.instruments;
 
 import java.io.Serializable;
 
-public class Flute extends Instrument implements Serializable, WindInstrument {
+public class Flute extends Instrument implements Serializable, WindInstruments {
 
 	public static int numberOfFlutes = 0;
 	public static int chair = 1;

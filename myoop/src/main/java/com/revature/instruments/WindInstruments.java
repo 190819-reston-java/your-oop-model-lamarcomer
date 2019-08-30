@@ -6,7 +6,7 @@ package com.revature.instruments;
  *
  */
 
-public interface WindInstrument {
+public interface WindInstruments {
 
 	public void breathe();
 }

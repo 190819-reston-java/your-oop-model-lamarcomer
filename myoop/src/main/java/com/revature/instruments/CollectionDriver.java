@@ -1,13 +1,10 @@
 package com.revature.instruments;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
-import java.util.Set;
 
 public class CollectionDriver {
 	
@@ -17,7 +14,6 @@ public class CollectionDriver {
 
 	public static void main(String[] args) {
 //		instrumentCollection();
-//		instrumentCollection2();
 //		orchestraExample();
 		menu();
 	}
@@ -45,6 +41,7 @@ public class CollectionDriver {
 			orchestraExample2();
 			break;
 		case 6:
+			System.out.println("Exiting Program");
 			System.exit(0);
 			break;
 		}
@@ -81,7 +78,7 @@ public class CollectionDriver {
 	}
 	
 	private static void addTrombone() {
-		System.out.println("Enter name of Trombone player");
+		System.out.println("Enter name of new Trombone player:");
 		String enterName = sc.next();
 		instrumentList.add(new Trombone(enterName));
 		System.out.println("Added " + enterName + " to list.");

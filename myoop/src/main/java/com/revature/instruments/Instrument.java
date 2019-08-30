@@ -76,8 +76,8 @@ public abstract class Instrument {
 		}
 			this.number = number;
 	}
-
-	@Override
+	
+		@Override
 	public String toString() {
 		return "Instrument name: " + name + ", sound:" + sound + ", type:" + type + ", number: " + number;
 	}
